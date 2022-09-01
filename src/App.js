@@ -4,6 +4,8 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About-us';
 import Semester from './pages/Semester';
@@ -13,6 +15,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <>
+      <Navbar/>
       <Router>
         <Routes>
           <Route exact path="/" element={<Home/>}/>
@@ -22,6 +25,7 @@ function App() {
           <Route path="/notes/semester" element={<Semester/>}/>
         </Routes>
       </Router>
+      <Footer/>
     </>
   );
 }

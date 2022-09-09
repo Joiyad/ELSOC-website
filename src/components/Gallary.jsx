@@ -5,7 +5,7 @@ import Heading from "./Heading";
 const Gallary = () => {
   return (
     <div className=" bg-gray-900 bg-opacity-80 py-40">
-        <Heading title="Gallary"/>
+        <Heading title="Gallery"/>
         <div
         className="py-8 md:py-16 px-20 mt-20">
         <motion.div 

@@ -5,7 +5,7 @@ import {
   AccordionBody,
 } from "@material-tailwind/react";
 import { motion } from "framer-motion"
-import Heading from "./Heading";
+import Heading from "../BasicComponents/Heading";
  
 const Faq = () => {
   const [open, setOpen] = useState(0);

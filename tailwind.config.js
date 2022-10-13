@@ -8,7 +8,8 @@ module.exports = {
         k2d:"'K2D', sans-serif",
       },
       backgroundImage:{
-        front: "url('/public/1876.jpg)",
+        bgFront: "url('/public/1876.jpg')",
+        bgImage: "url('https://t3.ftcdn.net/jpg/02/10/99/46/240_F_210994630_0XfHNFjjMn1ocaQ8feaEJvWpr7UpuZFk.jpg')"
       }
     },
   },

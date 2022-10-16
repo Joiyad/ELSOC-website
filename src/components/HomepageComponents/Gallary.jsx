@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Heading from "../BasicComponents/Heading";
 import { useState, useRef, useEffect } from "react";
-import data from "./data.json";
+import data from "../../data/data.json";
 
 const Gallary = () => {
   const maxScrollWidth = useRef(0);
@@ -53,14 +53,14 @@ const Gallary = () => {
   return (
     <div className=" bg-gray-900 bg-opacity-80 py-40">
       <Heading title="Gallery" />
-      <div className="py-8 md:py-16 px-20 mt-20">
+      <div className="py-8 md:py-16 px-2 md:px-20 mt-20">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           transition={{ ease: "easeOut", duration: 2 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="flex flex-wrap justify-center -mx-4"
         >
-          <div className="hidden md:block md:w-4/5 px-4">
+          <div className="w-4/5 px-4">
             <div className="carousel mx-auto">
               <div className="relative overflow-hidden">
                 <div className="flex justify-between absolute top left w-full h-full">
@@ -132,7 +132,7 @@ const Gallary = () => {
                         <div
                           className="h-full w-full aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 hover:opacity-100 bg-gray-800 hover:bg-opacity-40 z-10"
                         >
-                          <h3 className="text-white py-6 px-3 mx-auto text-xl">
+                          <h3 className="text-white py-6 px-3 mx-auto text-2xl">
                             {resource.title}
                           </h3>
                         </div>

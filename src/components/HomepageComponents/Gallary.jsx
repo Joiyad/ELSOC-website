@@ -118,7 +118,7 @@ const Gallary = () => {
                         className="carousel-item text-center relative w-full h-[500px] snap-start"
                       >
                         <div
-                          className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
+                          className="h-full w-full aspect-video block bg-cover bg-origin-padding bg-left-top bg-no-repeat z-0"
                           style={{
                             backgroundImage: `url(${resource.imageUrl || ""})`,
                           }}

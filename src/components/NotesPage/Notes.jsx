@@ -21,7 +21,7 @@ const Notes = () => {
       initial={{ opacity: 0, y:100 }}
       transition={{ ease: "easeOut", duration: 2 }}
       whileInView={{opacity:1, y:0}}
-      className='flex flex-wrap justify-center gap-x-8 gap-y-12 my-12'>
+      className='flex flex-wrap justify-center gap-x-8 gap-y-16 my-12'>
         {data.map(({id, title, imageLink, link}) => (
         <a key={id} href={link} className="w-1/4 rounded-md overflow-hidden border-2 border-opacity-20 hover:scale-110 hover:transition-all hover:delay-150 hover:ease-in-out">
           <img src={imageLink} alt='notes' />

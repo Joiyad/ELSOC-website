@@ -53,7 +53,7 @@ const Gallary = () => {
   return (
     <div className=" bg-gray-900 bg-opacity-80 py-40">
       <Heading title="Gallery" />
-      <div className="py-8 md:py-16 px-2 md:px-20 mt-20">
+      <div className="py-8 md:pb-16 md:pt-12 px-2 md:px-20 mt-20">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           transition={{ ease: "easeOut", duration: 2 }}

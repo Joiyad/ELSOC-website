@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { data } from "../../data/navbarData";
 
 const Navbar = () => {
   const [isExpanded, toggleExpansion] = useState(false);
@@ -6,9 +7,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 w-full flex items-center justify-between flex-wrap bg-gray-800 bg-opacity-20 backdrop-blur-sm px-16 py-3 z-20">
       <div className="text-2xl font-semibold items-center flex-shrink-0 text-white ml-2">
-        {/* <img alt="logo" src="/elsoc.png" width="50" height="50"/> */}
         ELSOC
       </div>
+
+      {/* Button for small screen */}
       <div className="block lg:hidden">
         <button
           className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white"
@@ -24,36 +26,19 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
-      <div
-        className={`${
-          isExpanded ? `block` : `hidden`
-        } w-full flex justify-center lg:flex lg:items-center lg:w-auto`}
-      >
+
+      {/* Navbar items */}
+      <div className={`${isExpanded ? `block` : `hidden`} w-full flex justify-center lg:flex lg:items-center lg:w-auto`}>
         <div className="lg:flex gap-x-8 lg:mr-12 font-k2d">
+          {data.map(({id, title, path}) => (
           <a
-            href="/"
+            key={id}
+            href={path}
             className="block mt-4 hover:font-black hover:drop-shadow-4xl hover:transition-all lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
           >
-            HOME
+            {title}
           </a>
-          <a
-            href="/about"
-            className="block mt-4 hover:font-black  hover:drop-shadow-4xl hover:transition-all lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
-          >
-            ABOUT
-          </a>
-          <a
-            href="/notes"
-            className="block mt-4  hover:font-black hover:drop-shadow-4xl hover:transition-alllg:inline-block lg:mt-0 text-teal-200 hover:text-white"
-          >
-            NOTES
-          </a>
-          <a
-            href="/contact"
-            className="block mt-4  hover:font-black hover:drop-shadow-4xl hover:transition-alllg:inline-block lg:mt-0 text-teal-200 hover:text-white"
-          >
-            CONTACT
-          </a>
+          ))}
         </div>
       </div>
     </nav>

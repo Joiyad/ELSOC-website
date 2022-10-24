@@ -4,7 +4,7 @@ import Heading from '../BasicComponents/Heading'
 
 const AboutUs = () => {
   return (
-    <div className='px-4 md:px-52 py-48 bg-gray-900 bg-opacity-80'>
+    <div className='px-4 md:px-52 py-48'>
       <div>
         <Heading title="About ELSOC" />
         <motion.div

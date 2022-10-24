@@ -10,9 +10,11 @@ const Home = () => {
     <>
       <Background />
       <Front />
+      <div className="bg-gray-900 bg-opacity-70">
       <About />
       <Gallary />
       <Faq />
+      </div>
     </>
   );
 };

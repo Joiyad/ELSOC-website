@@ -15,7 +15,7 @@ const Faq = () => {
   };
  
   return (
-    <div className=" bg-gray-900 bg-opacity-80 py-20">
+    <div className="py-20">
     <Heading title="Frequently Answered Questions"/>
     <motion.div
     initial={{ opacity: 0, y:100 }}

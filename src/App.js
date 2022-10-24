@@ -11,6 +11,7 @@ import About from './pages/About-us';
 import Semester from './pages/Semester';
 import NotesPage from './pages/NotesPage';
 import Contact from './pages/Contact';
+import Events from './pages/Events';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/about" element={<About/>}/>
           <Route path="/notes" element={<NotesPage/>}/>
           <Route path="/contact" element={<Contact/>}/>
+          <Route path="/events" element={<Events/>}/>
           <Route path="/notes/semester" element={<Semester/>}/>
         </Routes>
       </Router>

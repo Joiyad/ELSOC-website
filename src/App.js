@@ -12,10 +12,12 @@ import Semester from './pages/Semester';
 import NotesPage from './pages/NotesPage';
 import Contact from './pages/Contact';
 import Events from './pages/Events';
+import { Background2 } from './components/Background/Background2';
 
 function App() {
   return (
     <>
+      {/* <Background2 /> */}
       <Navbar/>
       <Router>
         <Routes>

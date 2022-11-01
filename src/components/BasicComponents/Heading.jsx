@@ -1,8 +1,11 @@
 import React from 'react'
+// import './Heading.css'
 
 const Heading = ({title}) => {
   return (
-    <h2 className='text-5xl text-center  font-semibold text-teal-200 hover:transition-all hover:delay-150 hover:ease-in-out'>{title}</h2>
+    <div className='title-text'>
+      <h1 className='text-5xl text-center font-semibold text-teal-200'>{title}</h1>
+    </div>
   )
 }
 

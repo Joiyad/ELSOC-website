@@ -29,7 +29,7 @@ const Navbar = () => {
 
       {/* Navbar items */}
       <div className={`${isExpanded ? `block` : `hidden`} w-full flex justify-center lg:flex lg:items-center lg:w-auto`}>
-        <div className="lg:flex gap-x-8 lg:mr-12 font-k2d">
+        <div className="lg:flex gap-x-8 font-k2d">
           {data.map(({id, title, path}) => (
           <a
             key={id}

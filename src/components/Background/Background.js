@@ -14,7 +14,7 @@ const Background = () => {
     }, []);
 
   return (
-    <div className='w-full h-screen -z-10 fixed'>
+    <div className='w-full h-screen fixed -z-10'>
     <Particles
     id="tsparticles"
     

@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <div>
       <footer className="bg-gray-800 bg-opacity-40 text-center lg:text-left pt-20">
-        <div className="container p-12 text-gray-800">
+        <div className="container md:p-12 text-gray-800">
           <h2 className="text-4xl md:text-6xl text-left m-8 text-white font-semibold underline decoration-4 underline-offset-8">
             CONTACT US
           </h2>

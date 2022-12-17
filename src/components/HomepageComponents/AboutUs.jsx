@@ -2,9 +2,9 @@ import React from 'react'
 import { motion } from "framer-motion"
 import Heading from '../BasicComponents/Heading'
 
-const AboutUs = () => {
+const AboutUs = ({ref}) => {
   return (
-    <div className='px-4 md:px-52 py-48'>
+    <div className='bg-black bg-opacity-60 px-4 md:px-52 py-40'>
       <div>
         <Heading title="About ELSOC" />
         <motion.div

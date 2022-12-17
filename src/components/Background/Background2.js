@@ -1,26 +1,27 @@
 import React, { useState, useEffect, useRef } from "react";
-import BIRDS from "vanta/dist/vanta.birds.min";
-import * as THREE from "three";
+import DOTS from "vanta/dist/vanta.dots.min";
+// Make sure window.THREE is defined, e.g. by including three.min.js in the document head using a <script> tag
 
-export const Background2 = () => {
-  const [vantaEffect, setVantaEffect] = useState(0);
-  const vantaRef = useRef(null);
-
+const Background2 = (props) => {
+  const [vantaEffect, setVantaEffect] = useState(null);
+  const myRef = useRef(null);
   useEffect(() => {
     if (!vantaEffect) {
       setVantaEffect(
-        BIRDS({
-          el: vantaRef.current,
-          THREE: THREE,
+        DOTS({
+          el: myRef.current,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
-          minHeight: 600.0,
-          minWidth: 600.0,
+          minHeight: 200.0,
+          minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color1: "#ff0000",
-          color2: "#00ff00"
+          color: 0x6e20ff,
+          backgroundColor: 0x4010f,
+          size: 3,
+          spacing: 40.0,
+          showLines: false,
         })
       );
     }
@@ -28,11 +29,8 @@ export const Background2 = () => {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
-  return (
-    <div ref={vantaRef} className='w-full h-screen fixed z-30'>
-      <p style={{ color: "#fff", paddingTop: "20px" }}>
-        Animated website backgrounds in a few lines of code.
-      </p>
-    </div>
-  );
+  return <div ref={myRef} className='h-screen fixed -z-10 w-full'>
+  </div>;
 };
+
+export default Background2;

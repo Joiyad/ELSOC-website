@@ -2,7 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import Heading from "../BasicComponents/Heading";
 import { useState, useRef, useEffect } from "react";
-import data from "../../data/data.json";
+import imageData from "../../data/imageData.json";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Gallary = () => {
   const maxScrollWidth = useRef(0);
@@ -51,7 +52,7 @@ const Gallary = () => {
   }, []);
 
   return (
-    <div className="py-40">
+    <div className="py-40 bg-black bg-opacity-60">
       <Heading title="Gallery" />
       <div className="py-8 md:pb-16 md:pt-12 px-2 md:px-20 mt-20">
         <motion.div
@@ -111,11 +112,11 @@ const Gallary = () => {
                   ref={carousel}
                   className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
                 >
-                  {data.resources.map((resource, index) => {
+                  {imageData.resources.map((resource, index) => {
                     return (
                       <div
                         key={index}
-                        className="carousel-item text-center relative w-full h-[500px] snap-start"
+                        className="carousel-item text-center relative w-full h-[200px] md:h-[500px] snap-start"
                       >
                         <div
                           className="h-full w-full aspect-video block bg-cover bg-origin-padding bg-left-top bg-no-repeat z-0"
@@ -123,7 +124,7 @@ const Gallary = () => {
                             backgroundImage: `url(${resource.imageUrl || ""})`,
                           }}
                         >
-                          <img
+                          <LazyLoadImage
                             src={resource.imageUrl || ""}
                             alt={resource.title}
                             className="w-full aspect-square hidden"
@@ -143,29 +144,6 @@ const Gallary = () => {
               </div>
             </div>
           </div>
-          {/* <div className="md:w-1/4 px-4">
-            <div
-              className="bg-cover w-full h-1/4 text-white text-center"
-              style={{
-                backgroundImage:
-                  "url('https://source.unsplash.com/random/1280x720')",
-              }}
-            >Intern Talk</div>
-            <div
-              className="bg-cover my-8 w-full h-1/4 text-white text-center"
-              style={{
-                backgroundImage:
-                  "url('https://source.unsplash.com/random/1280x720')",
-              }}
-            >Placement Talk</div>
-            <div
-              className="bg-cover w-full h-1/4 text-white text-center"
-              style={{
-                backgroundImage:
-                  "url('https://source.unsplash.com/random/1280x720')",
-              }}
-            >Teacher's Day</div>
-          </div> */}
         </motion.div>
       </div>
     </div>

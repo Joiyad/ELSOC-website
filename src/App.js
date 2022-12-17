@@ -6,22 +6,22 @@ import {
 } from "react-router-dom";
 import Navbar from './components/BasicComponents/Navbar';
 import Footer from './components/BasicComponents/Footer';
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
 import About from './pages/About-us';
 import Semester from './pages/Semester';
-import NotesPage from './pages/NotesPage';
+import NotesPage from './pages/StudyMaterialPage';
 import Contact from './pages/Contact';
 import Events from './pages/Events';
-import { Background2 } from './components/Background/Background2';
+import Background2 from './components/Background/Background2';
 
 function App() {
   return (
     <>
-      {/* <Background2 /> */}
       <Navbar/>
+      <Background2 />
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/" element={<HomePage/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/notes" element={<NotesPage/>}/>
           <Route path="/contact" element={<Contact/>}/>

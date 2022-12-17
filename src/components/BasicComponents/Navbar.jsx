@@ -5,7 +5,7 @@ const Navbar = () => {
   const [isExpanded, toggleExpansion] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full flex items-center justify-between flex-wrap bg-gray-800 bg-opacity-20 backdrop-blur-sm px-16 py-3 z-20">
+    <nav className="fixed top-0 w-full flex items-center justify-between flex-wrap backdrop-blur-sm px-4 md:px-16 py-3 z-20">
       <div className="text-2xl font-semibold items-center flex-shrink-0 text-white ml-2">
         ELSOC
       </div>

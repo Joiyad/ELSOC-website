@@ -110,7 +110,7 @@ const Gallary = () => {
                 </div>
                 <div
                   ref={carousel}
-                  className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+                  className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0 rounded-lg"
                 >
                   {imageData.resources.map((resource, index) => {
                     return (
